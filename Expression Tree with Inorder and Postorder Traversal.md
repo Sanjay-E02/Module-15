@@ -19,53 +19,12 @@ To write a Python program to build the given expression tree and print the inord
 ## PROGRAM:
 
 ```
-class Node:
-
-def __init__(self, val, left=None, right=None):
-
-    self.val = val
-    
-    self.left = left
-    
-    self.right = right
-def isLeaf(node):
-
-return node.left is None and node.right is None
-def process(op, x, y):
-
-if op == '+':
-    return x + y
-if op == '-':
-    return x - y
-if op == '*':
-    return x * y
-if op == '/':
-    return x / y
-def evaluate(root):
-
-if root is None:
-    return 0
-if isLeaf(root):
-    return float(root.val)
-x = evaluate(root.left)
-y = evaluate(root.right)
-return (process(root.val, x, y))
-root = Node('+')
-
-root.left = Node('*')
-
-root.right = Node(3)
-
-root.left.left = Node(4)
-
-root.left.right = Node(8)
-
-print('The value of the expression tree is', evaluate(root))
+from binarytree import build,Node x=['*',4,'-',5,'+',2,7] t=build(x) print(t.inorder) print(t.postorder)
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/0a42522a-672c-4d42-886d-254930a1130c)
+![image](https://github.com/user-attachments/assets/812d4816-ee6b-4a3f-962c-368435360546)
 
 
 ## RESULT
-Thus, the expression tree is constructed and evaluated successfully using recursion.
+Thus the Python program to build the given expression tree and print the inorder and postorder traversals has been implemented and executed successfully.
