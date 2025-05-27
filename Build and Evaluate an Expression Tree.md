@@ -22,27 +22,20 @@ To write a Python program to build and evaluate the given Expression tree.
 ## PROGRAM:
 
 ```
-from binarytree import heap, Node, build.
+class Node: def init(self, val, left=None, right=None): self.val = val self.left = left self.right = right
 
-def heaptree(l):
+def isLeaf(node): return node.left is None and node.right is None
 
-t = build(l)
+def process(op, x, y): if op == '+': return x + y if op == '-': return x - y if op == '*': return x * y if op == '/': return x / y
 
-for i in t.values:
+def evaluate(root): if root is None: return 0 if isLeaf(root): return float(root.val) x=evaluate(root.left) y=evaluate(root.right) return (process(root.val,x,y)) root=Node('+') root.left=Node('*') root.right=Node('3') root.left.left=Node('4') root.left.right=Node('8')
 
-    print(i, "-->", end="")
-    
-print("\nHeight : ", t.height)
-
-print("Is max heap? : ", t.is_max_heap)
-
-print("Is complete tree? : ", t.is_complete)
-heaptree([89, 81, 76, 22, 14, 9, 54, 11])
+print("The value of the expression tree is",evaluate(root))
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/0672f8d9-37c1-4dc2-958e-a063f4a7cb84)
+![image](https://github.com/user-attachments/assets/cf1c765e-8e1b-43d3-a644-70944af6a830)
 
 
 ## RESULT:
-Thus, the Python program to build a heap tree, check if it is a max-heap and a complete tree, and print its height has been implemented and executed successfully.
+Thus the Python program to build and evaluate the given Expression tree has been implemented and executed successfully.
