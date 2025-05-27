@@ -75,9 +75,9 @@ print("\nIs this a Binary Search Tree? ", l.is_bst)
 ```
 
 ## OUTPUT
-```
+
 ![image](https://github.com/user-attachments/assets/0e370746-e06f-418f-b276-7441227b928a)
 
-```
-Thus, the Python program to build a binary search tree using a built-in function and perform postorder traversal has been implemented and executed successfully. The left subtree was printed, and it was verified that the tree is a Binary Search Tree.
 ## RESULT
+Thus, the Python program to build a binary search tree using a built-in function and perform postorder traversal has been implemented and executed successfully. The left subtree was printed, and it was verified that the tree is a Binary Search Tree.
+
